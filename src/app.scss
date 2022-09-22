@@ -1,0 +1,48 @@
+// ticTacToe styles
+$white-color: #f1f1f1;
+$text-color: #b732fa;
+$blue-color: #0f39f7;
+$bg-color: #123;
+
+@keyframes text {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.5);
+    }
+}
+
+.ticTacToe {
+    .board {
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        .cell {
+            text-shadow: 0 0 20px $text-color;
+            transition: 0.3s all ease;
+            border: 2px solid $blue-color !important;
+            color: $text-color;
+            font-size: 50px;
+            background: $bg-color;
+            width: 100px;
+            height: 100px;
+            outline: none;
+            border: none;
+
+            &:hover {
+                color: $white-color;
+                text-shadow: 0 0 20px $white-color;
+                background: $blue-color;
+            }
+
+            &:focus {
+                animation: text 0.3s ease;
+            }
+        }
+    }
+}
